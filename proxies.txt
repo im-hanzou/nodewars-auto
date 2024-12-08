@@ -1,0 +1,3 @@
+#JUST EXAMPLE PLEASE DELETE
+http://host:port
+http://user:pass@host:port
