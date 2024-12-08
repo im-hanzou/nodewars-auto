@@ -219,6 +219,10 @@ def process_account(query_string: str, proxies: list):
 
             logger.info(f"{Fore.LIGHTMAGENTA_EX}UserID: {user_data.get('userId')}{Fore.RESET}")
             logger.info(f"{Fore.LIGHTMAGENTA_EX}Name: {user_data.get('name')}{Fore.RESET}")
+            logger.info(f"{Fore.LIGHTMAGENTA_EX}Level: {user_data.get('level')}{Fore.RESET}")
+            logger.info(f"{Fore.LIGHTMAGENTA_EX}Humanity: {user_data.get('humanity')}{Fore.RESET}")
+            logger.info(f"{Fore.LIGHTMAGENTA_EX}Points: {user_data.get('points')}{Fore.RESET}")
+            logger.info(f"{Fore.LIGHTMAGENTA_EX}Coins: {user_data.get('coins')}{Fore.RESET}")
             
             claim_response = claim_daily(query_string, logger, proxy, last_claim_time)
             if claim_response:
@@ -250,7 +254,7 @@ def process_account(query_string: str, proxies: list):
                 if finish_response:
                     if finish_response.get("data", {}).get("isLevelUp"):
                         user_data["level"] += 1
-                        logger.info(f"{Fore.GREEN}Level Up!{Fore.RESET}")
+                        logger.info(f"{Fore.GREEN}Leveled Up!{Fore.RESET}")
 
                     logger.info(f"{Fore.BLUE}Delay {delay} seconds before next game...{Fore.RESET}")
                     time.sleep(delay)
