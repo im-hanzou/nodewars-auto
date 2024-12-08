@@ -56,8 +56,8 @@ def setup_logging(username: str) -> logging.Logger:
     logger.handlers.clear()
     
     formatter = logging.Formatter(
-        f'{Fore.GREEN}%(asctime)s{Fore.RESET} - {Fore.CYAN}[{username}]{Fore.RESET} - %(levelname)s: %(message)s', 
-        datefmt='%Y-%m-%d %H:%M:%S'
+        f'{Fore.LIGHTWHITE_EX}%(asctime)s{Fore.RESET} - {Fore.CYAN}[{username}]{Fore.RESET} - %(levelname)s: %(message)s', 
+        datefmt='[%d-%m-%Y %H:%M:%S]'
     )
     
     console_handler = logging.StreamHandler()
