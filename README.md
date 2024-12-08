@@ -1,5 +1,8 @@
 # Node Wars Auto
 Automate script Node Wars game on the NodePay network. It supports multiple accounts and features proxy support, custom logging, and threading for parallel operations.
+- Auto Claim Daily
+- Auto Play Game
+- Auto Clear Tasks Coming Soon!
 ## Tools and components required
 1. Nodepay Account | Register: [https://app.nodepay.ai/register](https://app.nodepay.ai/register?ref=ZUCBuJaIoBXLE6J)
 2. Telegram and Nodewars Account | Register: [Node Wars](https://t.me/nodewars_bot?start=6465178420)
