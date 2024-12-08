@@ -102,8 +102,9 @@ def login_with_query_string(query_string: str, logger: logging.Logger, proxy: st
         response = requests.get(url, headers=headers, proxies=proxies, timeout=30)
         response.raise_for_status()
         
-        logger.info(f"{Fore.GREEN}Login successful!{Fore.RESET}")
         logger.info(f"{Fore.YELLOW}Proxy Used: {proxy or 'Direct Connection'}{Fore.RESET}")
+        logger.info(f"{Fore.GREEN}Login successful!{Fore.RESET}")
+
         return response.json()["data"]
     except requests.exceptions.RequestException as e:
         logger.error(f"{Fore.RED}Login failed: {e}{Fore.RESET}")
@@ -209,7 +210,6 @@ def process_account(query_string: str, proxies: list):
     delay = random.randint(30, 60)
     
     proxy = random.choice(proxies) if proxies else None
-    logger.info(f"{Fore.YELLOW}Using proxy: {proxy or 'No proxy'}{Fore.RESET}")
     
     while True:
         try:
